@@ -9,6 +9,8 @@ import Preload from './src/Preload';
 import AddAmigos from './src/AddAmigos';
 import MostraDadosUsuario from './src/MostraDadosUsuario';
 
+// rotas do React native
+
 const Navigate = createStackNavigator({
   Preload: {
     screen: Preload,

@@ -12,7 +12,7 @@ export default class Preload extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-
+    // mostra tela antes de carregar o usuario autenticado
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.props.navigation.navigate('Interna');

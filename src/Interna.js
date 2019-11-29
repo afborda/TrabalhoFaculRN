@@ -18,6 +18,7 @@ export default class Interna extends Component {
       cpf: '',
     };
 
+    // Busca dados do usuario logado
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         firebase
@@ -30,6 +31,7 @@ export default class Interna extends Component {
             this.setState(state);
           });
 
+        //adiciona dados no FlatList
         firebase
           .database()
           .ref('amigos')

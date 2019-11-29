@@ -41,6 +41,7 @@ export default class Cadastro extends Component {
     firebase.auth().signOut();
   }
 
+  // Adiciona dados no firebase
   cadastrar() {
     if (this.state.emailInput != '' && this.state.senhaInput != '') {
       firebase.auth().onAuthStateChanged(user => {
@@ -69,6 +70,8 @@ export default class Cadastro extends Component {
           this.props.navigation.navigate('Interna');
         }
       });
+
+      // cria usuario autenticado
 
       firebase
         .auth()

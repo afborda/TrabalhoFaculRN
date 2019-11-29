@@ -25,6 +25,8 @@ export default class MostraDadosUsuario extends Component {
       estado: '',
     };
 
+    //Pega dados do Firebase
+
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         firebase
