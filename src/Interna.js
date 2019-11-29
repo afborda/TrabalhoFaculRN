@@ -29,6 +29,7 @@ export default class Interna extends Component {
             state.nome = snapshot.val().nome;
             this.setState(state);
           });
+
         firebase
           .database()
           .ref('amigos')
@@ -50,13 +51,14 @@ export default class Interna extends Component {
         this.props.navigation.navigate('Home');
       }
     });
-
-    this.addCurso = this.addCurso.bind(this);
+    this.mostraDadosUsuario = this.mostraDadosUsuario.bind(this);
     this.addAmigos = this.addAmigos.bind(this);
     this.sair = this.sair.bind(this);
   }
 
-  addCurso() {}
+  mostraDadosUsuario() {
+    this.props.navigation.navigate('MostraDadosUsuario');
+  }
 
   addAmigos() {
     this.props.navigation.navigate('AddAmigos');
@@ -64,12 +66,6 @@ export default class Interna extends Component {
 
   sair() {
     firebase.auth().signOut();
-  }
-
-  buscaCpf() {
-    if (this.state.cpf.length == 14) {
-      alert('dhusahduishduahsudiha');
-    }
   }
 
   render() {
@@ -96,7 +92,9 @@ export default class Interna extends Component {
         />
 
         <View style={styles.botoesArea}>
-          <Button title="+ Cursos" onPress={this.addCurso}></Button>
+          <Button
+            title="Dados Usuario"
+            onPress={this.mostraDadosUsuario}></Button>
           <Button title="+ Amigos" onPress={this.addAmigos}></Button>
           <Button title=" Sair" onPress={this.sair}></Button>
         </View>

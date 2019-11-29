@@ -7,6 +7,7 @@ import Cadastro from './src/Cadastro';
 import Interna from './src/Interna';
 import Preload from './src/Preload';
 import AddAmigos from './src/AddAmigos';
+import MostraDadosUsuario from './src/MostraDadosUsuario';
 
 const Navigate = createStackNavigator({
   Preload: {
@@ -17,6 +18,9 @@ const Navigate = createStackNavigator({
   },
   Cadastro: {
     screen: Cadastro,
+  },
+  MostraDadosUsuario: {
+    screen: MostraDadosUsuario,
   },
   Login: {
     screen: Login,
