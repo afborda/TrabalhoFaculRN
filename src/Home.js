@@ -32,10 +32,10 @@ export default class Home extends Component {
   render() {
     return (
       <ImageBackground
-        source={require('./../assets/img/fundo.jpeg')}
+        source={require('./../assets/img/fundo3.jpg')}
         style={styles.bgHome}>
         <View style={styles.container}>
-          <Text style={styles.title}>Cadastro e Localização</Text>
+          <Text style={styles.title}>Localização</Text>
           <View style={styles.buttonArea}>
             <TouchableHighlight
               underlayColor="#fff"

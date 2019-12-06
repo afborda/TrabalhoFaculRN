@@ -76,28 +76,18 @@ export default class Interna extends Component {
         <View style={styles.nomaArea}>
           <Text style={styles.nomeUser}> Nome: {this.state.nome}</Text>
         </View>
-        <TextInputMask
-          placeholder="CPF"
-          style={styles.input}
-          type={'cpf'}
-          value={this.state.cpf}
-          onChangeText={cpf => {
-            this.setState({
-              cpf: cpf,
-            });
-          }}
-        />
-        <FlatList
-          style={styles.historico}
-          data={this.state.historico}
-          renderItem={({item}) => <HistoricoItem data={item} />}
-        />
+
+        <View style={styles.historico}>
+          <Text>Aqui está o map!</Text>
+        </View>
 
         <View style={styles.botoesArea}>
           <Button
             title="Dados Usuario"
             onPress={this.mostraDadosUsuario}></Button>
-          <Button title="+ Amigos" onPress={this.addAmigos}></Button>
+          <Button
+            title="Mostra Lista Localização"
+            onPress={this.addAmigos}></Button>
           <Button title=" Sair" onPress={this.sair}></Button>
         </View>
       </View>
@@ -111,7 +101,7 @@ const styles = StyleSheet.create({
   },
   nomaArea: {
     paddingVertical: 20,
-    backgroundColor: '#bfb',
+    backgroundColor: '#bbccaa',
   },
   nomeUser: {
     textAlign: 'center',
@@ -119,6 +109,8 @@ const styles = StyleSheet.create({
   },
   historico: {
     flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   botoesArea: {
     flexDirection: 'row',

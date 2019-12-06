@@ -112,73 +112,7 @@ export default class Cadastro extends Component {
             style={styles.input}
             onChangeText={sobrenome => this.setState({sobrenome})}
           />
-          <TextInputMask
-            placeholder="Data de Nacimento"
-            style={styles.input}
-            type={'datetime'}
-            options={{
-              format: 'DD/MM/YYYY',
-            }}
-            value={this.state.dt}
-            onChangeText={text => {
-              this.setState({
-                dt: text,
-              });
-            }}
-          />
-          <TextInputMask
-            placeholder="CPF"
-            style={styles.input}
-            type={'cpf'}
-            value={this.state.cpf}
-            onChangeText={cpf => {
-              this.setState({
-                cpf: cpf,
-              });
-            }}
-          />
-          <TextInput
-            placeholder="Estado civil"
-            style={styles.input}
-            onChangeText={estadoCivel => this.setState({estadoCivel})}
-          />
-          <TextInput
-            placeholder="Curso"
-            style={styles.input}
-            onChangeText={curso => this.setState({curso})}
-          />
-          <TextInput
-            placeholder="Graduação"
-            style={styles.input}
-            onChangeText={graduacao => this.setState({graduacao})}
-          />
-          <TextInput
-            placeholder="Pós-Graduação"
-            style={styles.input}
-            onChangeText={posGraduacao => this.setState({posGraduacao})}
-          />
-          <Text style={styles.titleTextSection}>Onde Mora</Text>
-          <TextInput
-            placeholder="Logradouro"
-            style={styles.input}
-            onChangeText={logradouro => this.setState({logradouro})}
-          />
-          <TextInput
-            placeholder="Cep"
-            style={styles.input}
-            onChangeText={cep => this.setState({cep})}
-          />
-          <TextInput
-            placeholder="Cidade"
-            style={styles.input}
-            onChangeText={cidade => this.setState({cidade})}
-          />
 
-          <TextInput
-            placeholder="Estado"
-            style={styles.input}
-            onChangeText={cidade => this.setState({cidade})}
-          />
           <View>
             <TouchableHighlight
               underlayColor="#fff"
@@ -210,7 +144,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   button: {
-    backgroundColor: '#bfb',
+    backgroundColor: '#bbccaa',
     margin: 10,
     height: 40,
     width: 300,
